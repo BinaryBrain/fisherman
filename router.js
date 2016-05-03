@@ -7,10 +7,10 @@ Router.route('/', function () {
 });
 
 Router.route('/add', function () {
-	this.render('add', {
-		data: function () {
-			return Consumptions.find({});
-		}
-	});
-});
+	console.log(Meteor.userId())
+	if (!Meteor.userId()) {
+		Router.go("/");
+	}
 
+	this.render('add');
+});

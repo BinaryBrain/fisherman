@@ -1,7 +1,16 @@
 <head>
-  <title>fisherman</title>
+	<title>Fisherman's Friend Consumption Tracker</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+	<nav>
+		<a href="/">Home</a>
+		{{#if currentUser}}
+			<a href="/add">Add Consumption</a>
+		{{/if}}
+
+		{{> loginButtons}}
+	</nav>
+
+	<h1>Fisherman's Friend Consumption Tracker</h1>
 </body>
