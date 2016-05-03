@@ -3,7 +3,7 @@ Consumptions.attachSchema(new SimpleSchema({
 	user: {
 		type: String,
 		label: "User",
-		
+
 		autoform: {
 			type: "hidden"
 		}
@@ -45,14 +45,20 @@ Consumptions.attachSchema(new SimpleSchema({
 
 	"geoloc.latitude": {
 		type: Number,
+		decimal: true,
 		label: "Latitude",
-		optional: true
+		optional: true,
+		min: -90,
+		max: 90
 	},
 
 	"geoloc.longitude": {
 		type: Number,
+		decimal: true,
 		label: "Longitude",
-		optional: true
+		optional: true,
+		min: -180,
+		max: 180
 	},
 
 	"api": {

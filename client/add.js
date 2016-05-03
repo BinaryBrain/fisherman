@@ -9,7 +9,9 @@ AutoForm.hooks({
 		
 		after: {
 			insert: function (err, result) {
-				Router.go("/");
+				if (!err) {
+					Router.go("/");
+				}
 			}
 		}
 	}
