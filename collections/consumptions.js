@@ -12,6 +12,7 @@ Consumptions.attachSchema(new SimpleSchema({
 	datetime: {
 		type: Date,
 		label: "Datetime",
+		defaultValue: new Date(),
 
 		autoform: {
 			afFieldInput: {
@@ -37,6 +38,7 @@ Consumptions.attachSchema(new SimpleSchema({
 			"Spicy Mandarin",
 			"Honey & Lemon",
 			"Salmiak",
+			"Spearmint",
 			"Tropical",
 			"Liguorice",
 			"Sweet Liquorice"
