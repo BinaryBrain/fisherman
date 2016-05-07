@@ -2,7 +2,9 @@ AutoForm.hooks({
 	insertConsumptionForm: {
 		before: {
 			insert: function(doc) {
-				doc.user = Meteor.userId();
+				doc.user = {};
+				doc.user.id = Meteor.userId();
+				doc.user.name = Meteor.user().username;
 				return doc;
 			}
 		},

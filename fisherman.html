@@ -4,12 +4,12 @@
 
 <body>
 	<nav>
-		<div class="link"><a href="/">Home</a></div>
+		<div class="link-left"><a href="/">Home</a></div>
 		{{#if currentUser}}
-			<div class="link"><a href="/add">Add Consumption</a></div>
+			<div class="link-left"><a href="/add">Add Consumption</a></div>
 		{{/if}}
 
-		<div class="link">{{> loginButtons}}</div>
+		<div class="link-right">{{> loginButtons}}</div>
 	</nav>
 
 	<h1>Fisherman's Friend Consumption Tracker</h1>

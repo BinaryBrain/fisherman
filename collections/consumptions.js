@@ -1,11 +1,22 @@
 Consumptions = new Mongo.Collection("consumptions");
 Consumptions.attachSchema(new SimpleSchema({
-	user: {
+	'user.id': {
 		type: String,
-		label: "User",
+		label: "UserId",
 
 		autoform: {
-			type: "hidden"
+			type: "hidden",
+			label: false
+		}
+	},
+
+	'user.name': {
+		type: String,
+		label: "Username",
+
+		autoform: {
+			type: "hidden",
+			label: false
 		}
 	},
 

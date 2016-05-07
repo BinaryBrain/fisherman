@@ -1,16 +1,23 @@
 Router.route('/', function () {
+	var consumptions = Consumptions.find({});
+
 	this.render('home', {
-		data: function () {
-			return Consumptions.find({});
+		data: {
+			consumptions: consumptions
 		}
 	});
 });
 
 Router.route('/add', function () {
-	console.log(Meteor.userId())
 	if (!Meteor.userId()) {
 		Router.go("/");
 	}
 
 	this.render('add');
 });
+
+if (Meteor.isServer) {
+	Meteor.publish('consumptions', function () {
+		return Consumptions.find();
+	});
+}
