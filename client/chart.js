@@ -22,7 +22,7 @@ Template.chart.onRendered(function () {
 		lineSmooth: false,
 		height: 400,
 		plugins: [
-            Chartist.plugins.legend()
+            // Chartist.plugins.legend()
         ]
 	});
 });

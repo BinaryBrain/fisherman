@@ -27,4 +27,6 @@ mfpierre:chartist-js
 momentjs:moment
 mspi:chartistlegend
 fourseven:scss
-standard-minifiers
+nimble:restivus
+standard-minifier-css
+standard-minifier-js
