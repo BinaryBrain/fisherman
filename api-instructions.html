@@ -17,15 +17,36 @@ X-User-Id: &lt;the_user-id_you_just_got&gt;
 	</pre>
 
 	<h4>Body (JSON)</h4>
-	<ul>
-		<li><strong>user.id [String]:</strong> Your user ID</li>
-		<li><strong>user.name [String]:</strong> Your username</li>
-		<li><strong>type [String]:</strong> Type of Fisherman's consumed</li>
-		<li><strong>datetime [ISO 8601 Datetime] (Optional):</strong> Datetime of consumption (current datetime by default)</li>
-		<li><strong>geoloc.latitude [Number] (Optional):</strong> Latitude</li>
-		<li><strong>geoloc.longitude [Number] (Optional):</strong> Longitude</li>
-		<li><strong>api [String] (Optional):</strong> Your API names (just for fun)</li>
-	</ul>
+	<table>
+		<tr>
+			<th>user.id [String]</th>
+			<td>Your user ID</td>
+		</tr>
+		<tr>
+			<th>user.name [String]</th>
+			<td>Your username</td>
+		</tr>
+		<tr>
+			<th>type [String]</th>
+			<td>Type of Fisherman's consumed</td>
+		</tr>
+		<tr>
+			<th>datetime [ISO 8601 Datetime] (Optional)</th>
+			<td>Datetime of consumption (current datetime by default)</td>
+		</tr>
+		<tr>
+			<th>geoloc.latitude [Number] (Optional)</th>
+			<td>Latitude</td>
+		</tr>
+		<tr>
+			<th>geoloc.longitude [Number] (Optional)</th>
+			<td>Longitude</td>
+		</tr>
+		<tr>
+			<th>api [String] (Optional)</th>
+			<td>Your API names (just for fun)</td>
+		</tr>
+	</table>
 
 	<h3>Fisherman's Types</h3>
 	<p>Here is the list of possible values for the type</p>
@@ -55,12 +76,12 @@ X-User-Id: &lt;the_user-id_you_just_got&gt;
 	"datetime": "2016-05-08T02:35:51.200Z",
 	"type": "Citrus",
 	"geoloc": {
-		"latitude": 0.01,
-		"longitude": -0.01
+		"latitude": 46.5197,
+		"longitude": 6.6323
 	},
 	"user": {
 		"id": "segu3KQuPqwD7PMpC",
-		"name": "test"
+		"name": "username"
 	}
 }
 	</pre>
