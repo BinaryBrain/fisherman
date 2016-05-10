@@ -6,6 +6,9 @@ Meteor.startup(function () {
 		prettyJson: true
 	});
 
-	Api.addCollection(Consumptions);
-	Api.addCollection(Meteor.users);
+	Api.addCollection(Consumptions, {
+		routeOptions: {
+			authRequired: true
+		}
+	});
 });

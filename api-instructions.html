@@ -1,0 +1,67 @@
+<template name="api-instructions">
+	<h2>API Instructions</h2>
+	<p>First of all, you need an account to use the API.</p>
+	
+	<h3>I. Token</h3>
+	<p>First, you need to get an auth token.</p>
+	<pre>curl --data "password=password&user=test" http://localhost:3000/api/v1/login/</pre>
+
+	<h3>II. Request</h3>
+	<p>Then, you can POST a new consumption.</p>
+	
+	<h4>Headers</h4>
+	<pre>
+Content-Type: application/json
+X-Auth-Token: &lt;the_token_you_just_got&gt;
+X-User-Id: &lt;the_user-id_you_just_got&gt;
+	</pre>
+
+	<h4>Body (JSON)</h4>
+	<ul>
+		<li><strong>user.id [String]:</strong> Your user ID</li>
+		<li><strong>user.name [String]:</strong> Your username</li>
+		<li><strong>type [String]:</strong> Type of Fisherman's consumed</li>
+		<li><strong>datetime [ISO 8601 Datetime] (Optional):</strong> Datetime of consumption (current datetime by default)</li>
+		<li><strong>geoloc.latitude [Number] (Optional):</strong> Latitude</li>
+		<li><strong>geoloc.longitude [Number] (Optional):</strong> Longitude</li>
+		<li><strong>api [String] (Optional):</strong> Your API names (just for fun)</li>
+	</ul>
+
+	<h3>Fisherman's Types</h3>
+	<p>Here is the list of possible values for the type</p>
+	<ul>
+		<li>Apple-Cinnamon</li>
+		<li>Cinnamon</li>
+		<li>Cassis</li>
+		<li>Cherry</li>
+		<li>Citrus</li>
+		<li>Mint (sucré)</li>
+		<li>Mint (sans sucre)</li>
+		<li>Eucalyptus (sucré)</li>
+		<li>Eucalyptus (sans sucre)</li>
+		<li>Anis</li>
+		<li>Spicy Mandarin</li>
+		<li>Honey &amp; Lemon</li>
+		<li>Salmiak</li>
+		<li>Spearmint</li>
+		<li>Tropical</li>
+		<li>Liguorice</li>
+		<li>Sweet Liquorice</li>
+	</ul>
+
+	<h3>III. Example</h3>
+	<pre>
+{
+	"datetime": "2016-05-08T02:35:51.200Z",
+	"type": "Citrus",
+	"geoloc": {
+		"latitude": 0.01,
+		"longitude": -0.01
+	},
+	"user": {
+		"id": "segu3KQuPqwD7PMpC",
+		"name": "test"
+	}
+}
+	</pre>
+</template>
