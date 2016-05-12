@@ -25,7 +25,6 @@ accounts-ui
 accounts-password
 mfpierre:chartist-js
 momentjs:moment
-mspi:chartistlegend
 fourseven:scss
 nimble:restivus
 standard-minifier-css

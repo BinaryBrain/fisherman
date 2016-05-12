@@ -59,7 +59,7 @@ Consumptions.attachSchema(new SimpleSchema({
 	"geoloc.latitude": {
 		type: Number,
 		decimal: true,
-		label: "Latitude",
+		label: "Latitude (optional)",
 		optional: true,
 		min: -90,
 		max: 90
@@ -68,7 +68,7 @@ Consumptions.attachSchema(new SimpleSchema({
 	"geoloc.longitude": {
 		type: Number,
 		decimal: true,
-		label: "Longitude",
+		label: "Longitude (optional)",
 		optional: true,
 		min: -180,
 		max: 180

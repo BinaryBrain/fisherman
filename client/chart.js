@@ -20,10 +20,7 @@ Template.chart.onRendered(function () {
 			low: 0
 		},
 		lineSmooth: false,
-		height: 400,
-		plugins: [
-            // Chartist.plugins.legend()
-        ]
+		height: 400
 	});
 });
 
@@ -99,6 +96,14 @@ function computeChart(data) {
 	for (var i = 0, l = newSeries.length; i < l; i++) {
 		newSeries[i].data.sort(serieCompare);
 	}
+
+	var html = '<ul>';
+	for (var i = 0, l = newSeries.length; i < l; i++) {
+		html += '<li><span class="ct-series-' + i + '">' + newSeries[i].name + '</span></li>';
+	}
+	html += '</ul>';
+
+	document.querySelector('#chart-legend').innerHTML = html;
 
 	if (typeof chart !== 'undefined') {
 		console.log('updating chart');
