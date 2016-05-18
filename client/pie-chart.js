@@ -43,7 +43,7 @@ function computeChart(data) {
 
 	var html = '<ul>';
 	for (var i = 0, l = types.length; i < l; i++) {
-		html += '<li><span class="ct-series-' + i + '">' + types[i].type + '</span></li>';
+		html += '<li><span class="ct-series-' + i + '">' + types[i].type + ' [' + types[i].count + ']</span></li>';
 	}
 	html += '</ul>';
 
