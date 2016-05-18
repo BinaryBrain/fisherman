@@ -39,7 +39,7 @@ function computeChart(data) {
 
 	for (var i = 0, l = data.length; i < l; i++) {
 		data[i].datetime = datetimeToDate(data[i].datetime);
-		minTime = Math.min(minTime, data[i].datetime);
+		minTime = Math.min(minTime, data[i].datetime - MS_DAY);
 		maxTime = Math.max(maxTime, data[i].datetime);
 
 		if (typeof groupByUser[data[i].user.name] === 'undefined') {
