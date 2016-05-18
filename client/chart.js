@@ -31,9 +31,9 @@ function computeChart(data) {
 	}
 
 	var MS_DAY = 1000 * 60 * 60 * 24;
-	
+
 	var groupByUser = {};
-	
+
 	var minTime = Infinity;
 	var maxTime = -Infinity;
 
@@ -48,7 +48,7 @@ function computeChart(data) {
 			groupByUser[data[i].user.name].push(data[i]);
 		}
 	}
-	
+
 	for (var i in groupByUser) {
 		var groupByDate = {};
 
@@ -128,6 +128,7 @@ function computeChart(data) {
 	}
 
 	function datetimeToDate(datetime) {
-		return new Date(Math.floor(datetime / MS_DAY) * MS_DAY);
+		var lag = datetime.getTimezoneOffset() * 1000 * 60;
+		return new Date(Math.floor((datetime.getTime() - lag) / MS_DAY) * MS_DAY);
 	}
 }
